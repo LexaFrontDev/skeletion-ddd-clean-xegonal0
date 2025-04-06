@@ -1,5 +1,15 @@
-Tracer – Developer Task Tracker (In Development)
-Tracer is a task tracking application designed specifically for developers.
-It follows Clean Architecture, Domain-Driven Design (DDD), and Hexagonal Architecture principles to ensure a modular, testable, and maintainable codebase.
+# Tracer – Developer Task Tracker (In Development)
 
-The app is currently under development and will feature integration with Jira and GitHub, allowing seamless synchronization of issues and development workflows.
+**Tracer** is a task tracking application designed specifically for developers.
+
+## Architecture
+- Clean Architecture  
+- Domain-Driven Design (DDD)  
+- Hexagonal Architecture  
+
+## Tech Stack
+- Symfony  
+- Docker  
+- Vue.js *(planned)*
+
+The application is currently under active development. In the future, it will include integration with **Jira** and **GitHub**, enabling seamless synchronization of issues and development workflows.
