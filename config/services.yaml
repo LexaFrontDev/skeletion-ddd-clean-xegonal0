@@ -16,3 +16,31 @@ services:
         arguments:
             - '%kernel.project_dir%/src/Infrastructure/Persistence/Doctrine/Mapping'
         public: true
+    app.event.authentication_success_listener:
+        class: App\Infrastructure\SymfonyEvent\Listener\AuthenticationSuccessListener
+        tags:
+            - { name: kernel.event_listener, event: lexik_jwt_authentication.on_authentication_success }
+    app.event.authentication_failure_listener:
+        class: App\Infrastructure\SymfonyEvent\Listener\AuthenticationFailureListener
+        tags:
+            - { name: kernel.event_listener, event: lexik_jwt_authentication.on_authentication_failure }
+    app.event.jwt_invalid_listener:
+        class: App\Infrastructure\SymfonyEvent\Listener\JWTFailureListener
+        tags:
+            - { name: kernel.event_listener, event: lexik_jwt_authentication.on_jwt_invalid }
+    app.event.jwt_notfound_listener:
+        class: App\Infrastructure\SymfonyEvent\Listener\JWTFailureListener
+        tags:
+            - { name: kernel.event_listener, event: lexik_jwt_authentication.on_jwt_not_found }
+    app.event.jwt_expired_listener:
+        class: App\Infrastructure\SymfonyEvent\Listener\JWTFailureListener
+        tags:
+            - { name: kernel.event_listener, event: lexik_jwt_authentication.on_jwt_expired }
+    app.event.refresh_authentication_failure_listener:
+        class: App\Infrastructure\SymfonyEvent\Listener\RefreshAuthenticationFailureListener
+        tags:
+            - { name: kernel.event_listener, event: gesdinet.refresh_token_failure }
+    app.event.refresh_token_notfound_listener:
+        class: App\Infrastructure\SymfonyEvent\Listener\RefreshTokenNotFoundListener
+        tags:
+            - { name: kernel.event_listener, event: gesdinet.refresh_token_not_found }
