@@ -58,14 +58,15 @@ RUN chmod -R g+rwX /var/www
 RUN chmod -R g+s /var/www
 
 
-WORKDIR /var/www/html
+WORKDIR /var/www/html/public/
+
 
 
 RUN curl -1sLf https://dl.cloudsmith.io/public/symfony/stable/setup.deb.sh | bash
 RUN apt-get install symfony-cli
 
 
-EXPOSE 9040
+EXPOSE 9000
 
 
 CMD ["php-fpm"]
