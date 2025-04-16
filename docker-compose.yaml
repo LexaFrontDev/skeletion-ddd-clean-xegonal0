@@ -6,7 +6,7 @@ services:
     restart: always
     container_name: web-server-tracer
     ports:
-      - "9040:80"
+      - "9000:80"
     volumes:
       - .:/var/www/html
       - ./docker/nginx/conf.d/Tracer.local.conf:/etc/nginx/conf.d/Tracer.local.conf
