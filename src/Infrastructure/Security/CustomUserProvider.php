@@ -2,9 +2,9 @@
 
 namespace App\Infrastructure\Security;
 
-use App\Domain\User\Entity\User;
-use App\Domain\User\Entity\ValueObject\Password;
-use App\Domain\User\Persistence\UserGatewayInterface;
+use App\Domain\Entity\User\User;
+use App\Domain\Entity\ValueObject\User\Password;
+use App\Domain\Persistence\User\UserGatewayInterface;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
 use Symfony\Component\Security\Core\Exception\UserNotFoundException;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;

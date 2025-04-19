@@ -2,7 +2,7 @@
 
 namespace App\Application\Security;
 
-use App\Domain\User\Entity\User;
+use App\Domain\Entity\User\User;
 
 interface PasswordHasherInterface
 {

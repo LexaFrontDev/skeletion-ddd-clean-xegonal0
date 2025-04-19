@@ -2,9 +2,9 @@
 
 namespace App\Infrastructure\Serializer;
 
+use App\Domain\Entity\User\User;
 use App\Domain\Exception\Core\ExceptionUserMessage;
 use App\Domain\Exception\Core\StatusCode;
-use App\Domain\User\Entity\User;
 use App\Infrastructure\Exception\InvalidTypeException;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;

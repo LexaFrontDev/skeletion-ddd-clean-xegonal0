@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Domain\User\Entity;
+namespace App\Domain\Entity\User;
 
+use App\Domain\Entity\ValueObject\User\EmailAddress;
+use App\Domain\Entity\ValueObject\User\Password;
+use App\Domain\Entity\ValueObject\User\Username;
 use App\Domain\Security\Permission\PermissionInterface;
 use App\Domain\Security\RoleEnum;
-use App\Domain\User\Entity\ValueObject\EmailAddress;
-use App\Domain\User\Entity\ValueObject\Password;
-use App\Domain\User\Entity\ValueObject\Username;
 
 class User
 {

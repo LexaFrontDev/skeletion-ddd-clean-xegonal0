@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\User\Entity\ValueObject;
+namespace App\Domain\Entity\ValueObject\User;
 
 use App\Domain\Exception\Core\ExceptionUserMessage;
 use App\Domain\Exception\Core\StatusCode;

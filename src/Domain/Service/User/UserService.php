@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Domain\User\Service;
+namespace App\Domain\Service\User;
 
 use App\Domain\Exception\Core\ExceptionUserMessage;
 use App\Domain\Exception\Core\StatusCode;
 use App\Domain\Exception\DomainValidationException;
-use App\Domain\User\Persistence\UserGatewayInterface;
+use App\Domain\Persistence\User\UserGatewayInterface;
 
 class UserService
 {

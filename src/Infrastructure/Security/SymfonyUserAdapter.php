@@ -2,8 +2,8 @@
 
 namespace App\Infrastructure\Security;
 
+use App\Domain\Entity\User\User;
 use App\Domain\Security\RoleEnum;
-use App\Domain\User\Entity\User;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 

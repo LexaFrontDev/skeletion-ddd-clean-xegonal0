@@ -3,7 +3,7 @@
                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                   xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
                                       https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
-    <entity name="App\Domain\User\Entity\User"
+    <entity name="App\Domain\Entity\User"
             table="users"
             repository-class="App\Infrastructure\Persistence\Doctrine\Repository\User\UserRepository">
         <indexes>
@@ -14,11 +14,11 @@
             <generator strategy="AUTO"/>
         </id>
 
-        <embedded name="username" class="App\Domain\User\Entity\ValueObject\Username" use-column-prefix="false"/>
+        <embedded name="username" class="App\Domain\Entity\ValueObject\User\Username" use-column-prefix="false"/>
 
-        <embedded name="email" class="App\Domain\User\Entity\ValueObject\EmailAddress" use-column-prefix="false"/>
+        <embedded name="email" class="App\Domain\Entity\ValueObject\User\EmailAddress" use-column-prefix="false"/>
 
-        <embedded name="password" class="App\Domain\User\Entity\ValueObject\Password" use-column-prefix="false"/>
+        <embedded name="password" class="App\Domain\Entity\ValueObject\User\Password" use-column-prefix="false"/>
 
         <field name="role" column="role" type="role_enum"/>
     </entity>

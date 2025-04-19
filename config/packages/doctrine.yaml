@@ -18,14 +18,18 @@ doctrine:
                 dir: '%kernel.project_dir%/src/Infrastructure/Security/Entity'
                 prefix: 'App\Infrastructure\Security\Entity'
                 alias: RefreshToken
-            AppMapping:
-                type: xml
-                dir: '%kernel.project_dir%/src/Infrastructure/Persistence/Doctrine/Mapping'
+            Entity:
                 is_bundle: false
-                prefix: 'App\Domain'
-                alias: AppMapping
-
-
+                type: xml
+                dir: '%kernel.project_dir%/src/Infrastructure/Persistence/Doctrine/Mapping/Entity'
+                prefix: 'App\Domain\Entity'
+                alias: Entity
+            Embeddable:
+                is_bundle: false
+                type: xml
+                dir: '%kernel.project_dir%/src/Infrastructure/Persistence/Doctrine/Mapping/Embeddable'
+                prefix: 'App\Domain\Entity\ValueObject'
+                alias: Embeddable
 
 when@test:
     doctrine:

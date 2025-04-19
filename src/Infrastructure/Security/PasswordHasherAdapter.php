@@ -3,7 +3,7 @@
 namespace App\Infrastructure\Security;
 
 use App\Application\Security\PasswordHasherInterface;
-use App\Domain\User\Entity\User;
+use App\Domain\Entity\User\User;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 readonly class PasswordHasherAdapter implements PasswordHasherInterface

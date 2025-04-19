@@ -2,8 +2,8 @@
 
 namespace App\Infrastructure\Persistence\Doctrine\Repository\User;
 
-use App\Domain\User\Entity\User;
-use App\Domain\User\Persistence\UserGatewayInterface;
+use App\Domain\Entity\User\User;
+use App\Domain\Persistence\User\UserGatewayInterface;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 

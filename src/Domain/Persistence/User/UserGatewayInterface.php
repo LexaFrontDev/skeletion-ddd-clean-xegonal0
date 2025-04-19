@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Domain\User\Persistence;
+namespace App\Domain\Persistence\User;
 
-use App\Domain\User\Entity\User;
+use App\Domain\Entity\User\User;
 
 interface UserGatewayInterface
 {
