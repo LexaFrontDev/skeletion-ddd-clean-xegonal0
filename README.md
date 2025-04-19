@@ -1,15 +1,36 @@
-# Tracer – Developer Task Tracker (In Development)
+Пока разрабатываю
+Шаблон проекта на Symfony с архитектурой DDD + Clean + Hexagonal.
+## Быстрый старт
 
-**Tracer** is a task tracking application designed specifically for developers.
+1. Клонируй репозиторий:
+```bash
+git clone https://github.com/LexaFrontDev/template-ddd-clean-xegonal.git
+cd template-ddd-clean-xegonal
+```
 
-## Architecture
-- Clean Architecture  
-- Domain-Driven Design (DDD)  
-- Hexagonal Architecture  
+2. Измени названия контейнеров и домен в `docker-compose.yml` и `nginx/conf.d/default.conf` под свой `server_name`.
 
-## Tech Stack
-- Symfony  
-- Docker  
-- Vue.js *(planned)*
+3. Подними Docker:
+```bash
+docker-compose up -d --build
+```
 
-The application is currently under active development. In the future, it will include integration with **Jira** and **GitHub**, enabling seamless synchronization of issues and development workflows.
+4. Зайди в контейнер PHP:
+```bash
+docker exec -it <php-container-name> bash
+```
+
+5. Установи зависимости:
+```bash
+composer install
+```
+
+6. Добавь домен в `hosts`:
+```
+127.0.0.1 myproject.local
+```
+
+7. Открой в браузере:
+```
+http://myproject.local
+```
