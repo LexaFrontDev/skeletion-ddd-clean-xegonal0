@@ -3,7 +3,8 @@ doctrine:
         url: '%env(resolve:DATABASE_URL)%'
         profiling_collect_backtrace: '%kernel.debug%'
         use_savepoints: true
-
+        types:
+            role_enum: App\Infrastructure\Persistence\Doctrine\Type\RoleType
     orm:
         auto_generate_proxy_classes: true
         enable_lazy_ghost_objects: true
@@ -18,18 +19,19 @@ doctrine:
                 dir: '%kernel.project_dir%/src/Infrastructure/Security/Entity'
                 prefix: 'App\Infrastructure\Security\Entity'
                 alias: RefreshToken
-            Entity:
+            User:
                 is_bundle: false
                 type: xml
-                dir: '%kernel.project_dir%/src/Infrastructure/Persistence/Doctrine/Mapping/Entity'
-                prefix: 'App\Domain\Entity'
-                alias: Entity
-            Embeddable:
+                dir: '%kernel.project_dir%/src/Infrastructure/Persistence/Doctrine/Mapping/Entity/User'
+                prefix: 'App\Domain\Entity\User'
+                alias: User
+            UserValueObject:
                 is_bundle: false
                 type: xml
-                dir: '%kernel.project_dir%/src/Infrastructure/Persistence/Doctrine/Mapping/Embeddable'
-                prefix: 'App\Domain\Entity\ValueObject'
-                alias: Embeddable
+                dir: '%kernel.project_dir%/src/Infrastructure/Persistence/Doctrine/Mapping/Entity/Embeddable/User'
+                prefix: 'App\Domain\Entity\ValueObject\User'
+                alias: UserValueObject
+
 
 when@test:
     doctrine:
